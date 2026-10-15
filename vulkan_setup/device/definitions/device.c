@@ -80,7 +80,7 @@ uint32_t get_queue_family(void){ //gets the queue family we want, queue families
         printf("[ ERROR ] no queue families found\n");
         exit(EXIT_FAILURE);
     }
-    device_supports_presentation();
+    device_supports_presentation(); //checks if the device has queues that supports presentation queue, the presentation queue is used for displaying images at the window created by the window system
     for(uint32_t i = 0; i < queue_family_properties_amount; i++){ //loops through all the existing queue families
         if(queue_family_properties[i].queueFlags & VK_QUEUE_GRAPHICS_BIT && presentation_support == VK_TRUE){ //tries to find the queue family that supports graphics
             family_index = i; //if it finds the queue family that supports graphics, we store the family index            
