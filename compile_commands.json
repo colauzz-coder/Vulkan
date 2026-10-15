@@ -1,0 +1,98 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-o",
+      "vulkan",
+      "./main.c"
+    ],
+    "directory": "/home/nicolas/vulkan",
+    "file": "/home/nicolas/vulkan/main.c",
+    "output": "/home/nicolas/vulkan/vulkan"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-o",
+      "vulkan",
+      "./vulkan_setup/device/definitions/device.c"
+    ],
+    "directory": "/home/nicolas/vulkan",
+    "file": "/home/nicolas/vulkan/vulkan_setup/device/definitions/device.c",
+    "output": "/home/nicolas/vulkan/vulkan"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-o",
+      "vulkan",
+      "./vulkan_setup/glfw/definitions/glfw.c"
+    ],
+    "directory": "/home/nicolas/vulkan",
+    "file": "/home/nicolas/vulkan/vulkan_setup/glfw/definitions/glfw.c",
+    "output": "/home/nicolas/vulkan/vulkan"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-o",
+      "vulkan",
+      "./vulkan_setup/layers/validation/extensions/definitions/glfw.c"
+    ],
+    "directory": "/home/nicolas/vulkan",
+    "file": "/home/nicolas/vulkan/vulkan_setup/layers/validation/extensions/definitions/glfw.c",
+    "output": "/home/nicolas/vulkan/vulkan"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-o",
+      "vulkan",
+      "./vulkan_setup/layers/validation/extensions/definitions/vulkan_debug.c"
+    ],
+    "directory": "/home/nicolas/vulkan",
+    "file": "/home/nicolas/vulkan/vulkan_setup/layers/validation/extensions/definitions/vulkan_debug.c",
+    "output": "/home/nicolas/vulkan/vulkan"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-o",
+      "vulkan",
+      "./vulkan_setup/layers/validation/instance/definitions/instance.c"
+    ],
+    "directory": "/home/nicolas/vulkan",
+    "file": "/home/nicolas/vulkan/vulkan_setup/layers/validation/instance/definitions/instance.c",
+    "output": "/home/nicolas/vulkan/vulkan"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-o",
+      "vulkan",
+      "./vulkan_setup/instance/definitions/instance.c"
+    ],
+    "directory": "/home/nicolas/vulkan",
+    "file": "/home/nicolas/vulkan/vulkan_setup/instance/definitions/instance.c",
+    "output": "/home/nicolas/vulkan/vulkan"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-o",
+      "vulkan",
+      "./vulkan_setup/vulkan_main.c"
+    ],
+    "directory": "/home/nicolas/vulkan",
+    "file": "/home/nicolas/vulkan/vulkan_setup/vulkan_main.c",
+    "output": "/home/nicolas/vulkan/vulkan"
+  }
+]
