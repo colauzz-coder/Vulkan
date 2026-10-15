@@ -8,5 +8,5 @@ extern VkBool32 presentation_support;
 void glfw_init(void); //glfw initialization
 GLFWwindow* create_window(GLFWwindow* window, uint32_t width, uint32_t height); //window creation
 void create_surface(GLFWwindow* window);
-void device_supports_presentation(void);
+void device_supports_presentation(uint32_t queue_family_index);
 #endif

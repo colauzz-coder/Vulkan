@@ -54,12 +54,18 @@ void create_surface(GLFWwindow* window){ //creates a window surface, vulkan need
     }
 }
 
-void device_supports_presentation(void){ //this function checks if the physical device(gpu) supports the presentation queue that is needed to show things
-    VkResult result_device_surface_support = vkGetPhysicalDeviceSurfaceSupportKHR(physical_device, family_index, surface, &presentation_support); //the vkGetPhysicalDeviceSurfaceSupportKHR function returns if the specified queue family from the specified device can show things to an specific window surface
+void device_supports_presentation(uint32_t queue_family_index){ //this function checks if the physical device(gpu) supports the presentation queue that is needed to show things
+    VkResult result_device_surface_support = vkGetPhysicalDeviceSurfaceSupportKHR(physical_device, queue_family_index, surface, &presentation_support); //the vkGetPhysicalDeviceSurfaceSupportKHR function returns if the specified queue family from the specified device can show things to an specific window surface
     if(result_device_surface_support == VK_SUCCESS){ //checks if it can show images to that window surface
-        printf("[ OK ] device presentation queue supported\n"); 
+        presentation_support = VK_TRUE;
+        VkPhysicalDeviceProperties device_properties;
+        vkGetPhysicalDeviceProperties(physical_device, &device_properties);
+        printf("[ OK ] presentation queue is supported in the device %s\n", device_properties.deviceName);
     }else{
-        printf("[ ERROR ] device presentation queue isn't supported\n");
+        presentation_support = VK_FALSE;
+        VkPhysicalDeviceProperties device_properties;
+        vkGetPhysicalDeviceProperties(physical_device, &device_properties);
+        printf("[ ERROR ] presentation queue isn't supported in the device %s\n", device_properties.deviceName);
         exit(EXIT_FAILURE);
     }
 }

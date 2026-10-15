@@ -11,8 +11,7 @@
 int main(void){
     static const uint32_t width = 800, height = 600;
     glfw_init();
-    GLFWwindow* window;
-    window = create_window(window, width, height);
+    GLFWwindow* window = create_window(window, width, height);
     vulkan_init(window);
     while(!glfwWindowShouldClose(window)){
         glfwPollEvents();
